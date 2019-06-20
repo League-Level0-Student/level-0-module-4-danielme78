@@ -1,18 +1,29 @@
+PImage face;
  void setup(){
-PImage face = loadImage("Patrick.png");
-size(800,600);
+face = loadImage("kid.png");
+size(400,400);
 face.resize(width,height);
-    background(face);      
+          
 
    
   
 }
 
     void draw(){
-ellipse(328,170,85,85);
+ background(face);
+fill(255,255,255);
+      
+ellipse(170,155,75,75);
 
-ellipse(395,170,92,92);
+ellipse(245,135,73,73);
 
-  
+fill(100,100,255);
+ellipse(mouseX,mouseY,25,25);
+
+ellipse(mouseX ,mouseY ,25,25);
+
+
+
+
   
 }

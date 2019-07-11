@@ -21,25 +21,45 @@ ellipse(170,155,75,75);
 ellipse(245,135,73,73);
 
 
-
-if(x>146){
- x=146; 
-} 
-if(x>161){
- x=161;
+if(x>210){
+ x=210;
 }
   
 
-if(y>207){
- y=207; 
-}
-if(y>278){
-  y=278;
-}
-fill(50,200,255);
-ellipse(x - 30,y + 10 ,25,25);
 
-ellipse(x + 50 ,y - 15 ,25,25);
+if(y>160){
+  y=160;
+}
+//145,129
+int minx = 145;
+int miny =129;
+//195,182
+int maxx = 195;
+int maxy = 182;
+fill(50,200,255);
+if (mouseX > maxx){
+  x=maxx;
+}
+else if (mouseX < minx){
+x=minx;
+}
+else{
+  x= mouseX;
+}
+
+if (mouseY > maxy){
+  y=maxy;
+}
+
+else if (mouseY < miny){
+  y=miny;
+}
+else{
+  y= mouseY;
+}
+ellipse(x,y,25,25);
+
+ellipse(x + 75,y - 15,25,25);
 
 if(mousePressed){
  println(mouseX); 
